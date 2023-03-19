@@ -12,7 +12,6 @@ import android.view.ViewGroup
 import android.widget.DatePicker
 import android.widget.TimePicker
 import androidx.appcompat.app.AppCompatActivity
-import com.example.planneassessment1application2.R
 import kotlinx.android.synthetic.main.activity_mainscreen.*
 import java.time.Month
 import java.time.Year
@@ -35,6 +34,12 @@ class mainscreen : AppCompatActivity(), DatePickerDialog.OnDateSetListener, Time
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainscreen)
+
+        val bottomSheetFragment = BottomSheetFragment()
+
+        btn_show.setOnClickListener {
+            bottomSheetFragment.show(supportFragmentManager,"BottomSheetDialog")
+        }
 
         pickDate()
     }
@@ -72,9 +77,6 @@ class mainscreen : AppCompatActivity(), DatePickerDialog.OnDateSetListener, Time
         savedHour = hourOfDay
         savedMinute = minute
 
-        tv_textTime.text = "$savedDay-$savedMonth-$savedYear\n Hour: $savedHour Minute: $savedMinute"
+        tv_textTime.text = "$savedDay-$savedMonth-$savedYear\n Hours: $savedHour Minutes: $savedMinute"
     }
-
-
-
 }

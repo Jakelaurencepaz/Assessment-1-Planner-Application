@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/splashscreen">
 
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="228dp"
-        android:layout_height="194dp"
+        android:layout_height="140dp"
         android:layout_marginStart="91dp"
         android:layout_marginTop="176dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,14 +22,15 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="263dp"
+        android:layout_marginTop="500dp"
         android:text="Planner"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         tools:textSize="34sp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
